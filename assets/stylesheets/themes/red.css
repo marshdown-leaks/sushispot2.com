@@ -1,0 +1,72 @@
+/* red theme */
+
+a,
+#switch ul li a.current,
+#logo > div > a em {
+	color:#ac0000;
+}
+
+a:hover,
+a:focus {
+  color: #600000;
+}
+
+#top ul.span4 > li:hover > a, 
+#top ul > li.active > a,
+#front .title span,
+#front .subtitle span,
+#about-text h2,
+#about .caption-border  {
+	background-color: #AC0000;
+}
+
+.section-type.dark h3, 
+.section-type.dark h4 {
+	color: #554444;
+}
+
+#locations-info p, #locations-info address {
+  color: #b48c8c;
+}
+
+/* buttons */
+.btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #a20000;
+  background-image: -moz-linear-gradient(top, #ac0000, #930000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ac0000), to(#930000));
+  background-image: -webkit-linear-gradient(top, #ac0000, #930000);
+  background-image: -o-linear-gradient(top, #ac0000, #930000);
+  background-image: linear-gradient(to bottom, #ac0000, #930000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffac0000', endColorstr='#ff930000', GradientType=0);
+  border-color: #930000 #930000 #460000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #930000;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #930000;
+  *background-color: #790000;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #600000 \9;
+}
+
+/* theme images */
+.flex-direction-nav a { background: url(../../images/themes/red/slider-nav.png) no-repeat 0 0;}
+.customSelectInner { background: url(../../images/themes/red/select-arrow.png) no-repeat center right; }
+.to-top { background: url(../../images/themes/red/top.png) no-repeat; }
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose { background-image:url(../../images/themes/red/colorbox.png); }
+#gallery figcaption div { background-image: url(../../images/themes/red/zoom.png); }
+#directions { background-color: #381414; background-image: url(../../images/themes/red/locations.jpg); }

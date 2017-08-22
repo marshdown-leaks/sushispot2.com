@@ -1,0 +1,1416 @@
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Panel Styles
+	#Header
+	#Front
+	#StickyButton
+	#About
+	#Directions
+	#Menu
+	#Wine List
+	#Gallery
+	#Contact
+	#Closing
+	#Footer
+	#Media Queries
+	#Misc
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+html {
+	overflow-x: hidden;
+}
+
+html, body {
+	height: 100%;
+}
+
+a:focus {
+	text-decoration: none;
+}
+
+.page-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+	margin: 0 30px 60px;
+}
+
+.section-type h3 {
+	font-family: 'PT Serif', Times New Roman, Serif;
+	font-size: 36px;
+	line-height: 42px;
+	letter-spacing: -1px;
+}
+
+.section-type h4 {
+	margin: 0;
+	font-size: 16px;
+	line-height: 22px;
+	text-transform: uppercase;
+	zoom: 1;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+.section-type.menu-type p {
+	margin-bottom: 0px;
+}
+
+.menu-section {
+	float: left;
+	width: 100%;
+	margin-bottom: 22px;
+}
+
+.light .page-title {
+	background: url(../images/bg/title-light.png) no-repeat center center;
+	color: #fff;
+}
+.dark .page-title {
+	background: url(../images/bg/title-dark.png) no-repeat center center;
+	color: #554444;
+}
+
+.section-type.light h3, .section-type.light h4, .section-type.light p {
+	color: #fff;
+}
+
+.section-type.dark h3, .section-type.dark h4 {
+	color: #554444;
+}
+
+.section-type.dark p {
+	color: #636363;
+}
+
+/* #Panel Styles
+================================================== */
+.panel.paper {
+	background: url(../images/bg/patterns/extra_clean_paper.png) 50% 0 repeat fixed;
+}
+.panel.dark-leather {
+	background: url(../images/bg/patterns/dark_leather.png) 50% 0 repeat fixed;
+}
+
+.panel.clouds {
+	background: #efe7e3 url(../images/bg/clouds.jpg) 0% 0% no-repeat fixed;
+}
+
+.panel.concrete {
+	background: url(../images/bg/patterns/concrete_wall.png) 50% 50% repeat fixed;
+}
+
+/* #Header
+================================================== */
+#top {
+	position: fixed;
+	background: url(../images/bg/brick.jpg) repeat-x;
+	height: 60px;
+	width: 100%;
+	border-top: 4px solid #a7895a;
+	z-index: 50;
+}
+
+#top .container {
+	
+}
+
+#logo > div {
+	background: url(../images/bg/header.png) no-repeat;
+	height: 93px;
+	width: 207px;
+	padding: 20px 10px 0 10px;
+	margin: auto;
+	text-align: center;
+}
+
+#logo > div > a {
+	font-family: 'PT Serif', Time New Roman, serif;
+	font-size: 38px;
+	font-weight: bold;
+	text-transform: lowercase;
+	color: #303030;
+	letter-spacing: -1px;
+	line-height: 28px;
+	transition: all .5 ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	outline: 0;
+}
+
+#logo > div > a em {
+	color: #ac0000;
+	font-style: normal;
+}
+
+#logo > div > a span {
+	color: #fff;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 12px;
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: 3px;
+	width: 100%;
+}
+
+#logo > div > a:hover {
+	color: #474747;
+	text-decoration: none;
+}
+
+#top ul {
+	list-style-type: none;
+	display: block;
+}
+
+#top ul.span4 > li {
+	position: relative;
+	float: left; 
+	margin: 10px 12px 0 0;
+	display: block;
+}
+
+#top ul.span4 > li > a {
+	float: left; 
+	color: #fff;
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 8px 8px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	transition: background .2 ease;
+	-webkit-transition: background .2s ease;
+	-moz-transition: background .2s ease;
+	-o-transition: background .2s ease;
+}
+
+#top ul.span4 > li:hover > a, #top ul > li.active > a {
+	text-decoration: none;
+	background: #ac0000;
+}
+
+
+#top ul.span4 > li:last-child {
+	margin-right: 0px !important;
+}
+
+#top ul > li > ul {
+	display: none;
+	position: absolute;
+	top: 42px;
+	left: -24px;
+	background: #000;
+	width: 220px;
+	padding: 0 10px 10px 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-top-left-radius: 0px;
+	-ms-border-top-left-radius: 0px;
+	-o-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-top-right-radius: 0px;
+	-ms-border-top-right-radius: 0px;
+	-o-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+
+	transition: background .2 ease;
+	-webkit-transition: background .2s ease;
+	-moz-transition: background .2s ease;
+	-o-transition: background .2s ease;
+}
+
+#top ul > li > ul > li {
+	width: 100%;
+	float: left;
+}
+
+#top ul > li:hover > ul {
+	display: block;
+}
+
+
+/* #Front
+================================================== */
+#front {
+	padding-top: 64px;
+	width: 100%;
+	z-index: 20;
+}
+#front .slides li {
+	position: relative;
+}
+#front .slides li img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 10;
+}
+
+#front .container {
+	position: relative;
+	top: 0;
+	z-index: 5000;
+}
+
+.slide-content {
+	position: absolute;
+	width: 100%;
+	bottom: 25%;
+}
+
+#front .title {
+	margin-bottom: 6px;
+}
+
+#front .title span {
+	color: #fff;
+	font-size: 24px;
+	line-height: 48px;
+	font-weight: 700;
+	background: #ac0000;
+	padding: 8px 12px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	margin-bottom: 12px;
+}
+
+#front a[href^=tel] {
+	color: #fff !important;
+}
+
+#front .subtitle {
+	margin-bottom: 0px;
+}
+
+#front .subtitle span{
+	color: #fff;
+	font-weight: 700;
+	line-height: 46px;
+	font-size: 20px;
+	background: #ac0000;
+	padding: 10px 12px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	margin-bottom: 12px;
+}
+
+#front .action { 
+	
+}
+
+#front .action a { 
+	color: #fff;
+	background: #a7895a;
+	padding: 6px;
+	font-weight: 700;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+#front .action a.map-icon {
+	background: #a7895a url(../images/icons/map.png) no-repeat 4px 4px;
+	padding: 12px 12px 12px 48px;
+}
+
+/* #StickyButton
+================================================== */
+.sticky-button{
+	border: none;
+	position: fixed;
+	right: 5%;
+	bottom: 3%;
+	z-index: 25;
+}
+
+.sticky-button > li{
+	list-style: none;
+}
+
+.sticky-button-link{
+	background: transparent url(../images/content/botonsticky.png) no-repeat;
+	background-size: 143px 108px;
+	background-position: 0 0;
+	width: 143px;
+	height: 54px;
+	display: block;
+}
+
+.sticky-button-link:hover{
+	background-position: 0 -53px;
+}
+
+
+
+.sticky-button2{
+	border: none;
+	position: fixed;
+	left: 2%;
+	bottom: 3%;
+	z-index: 9999;
+}
+
+.sticky-button2 > li{
+	list-style: none;
+}
+
+.sticky-button-link2{
+	background: transparent url(../images/face.png) no-repeat;
+	background-size: 32px 64px;
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
+.sticky-button-link2:hover{
+	background-position: 0 -32px;
+}
+
+.sticky-button3{
+        border: none;
+        position: fixed;
+        left: 5%;
+        bottom: 3%;
+        z-index: 999;
+}
+
+.sticky-button3 > li{
+        list-style: none;
+}
+
+.sticky-button-link3{
+        background: transparent url(../images/ig.png) no-repeat;
+        background-size: 32px 32px;
+        background-position: 0 0;
+        width: 32px;
+        height: 32px;
+        display: block;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.sticky-button-link3:hover{
+        opacity: 1.0;
+	filter:alpha(opacity=100);
+}
+
+/* #About
+================================================== */
+#about {
+	position: relative;
+	width: 100%;
+	padding: 6% 0;
+}
+
+#about-pictures > div {
+	text-align: center;
+}
+
+#about-pictures img {
+	border: 5px solid #fff;
+	margin-bottom: 20px;
+}
+
+#about-caption {
+	text-align: center;
+	padding: 80px 0 0;
+}
+
+#about-text h2 {
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 0px;
+	line-height: 26px;
+	background: #ac0000;
+	padding: 8px 12px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	margin-bottom: 12px;
+	display: inline;
+}
+
+#about-text h3 {
+	font-size: 18px;
+	margin-bottom: 4px;
+	line-height: 26px;
+}
+
+#about .caption {
+	margin-top: 36px;
+	font-size: 18px;
+	font-style: italic;
+}
+
+#about .caption span {
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#about .caption-border {
+	width: 133px;
+	height: 5px;
+	background: #ac0000;
+	margin: 30px auto;
+}
+
+/* #Directions
+================================================== */
+#directions {
+	background-position: 100% 0;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding: 6% 0;
+	color: #fff;
+}
+
+.location-title{
+	font-size: 20px;
+	line-height: 32px;
+}
+
+#locations-info h3, #locations-info h4 {
+	text-transform: none;
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 400;
+	margin-bottom: 0px;
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#locations-info p strong {
+	color: #fff;
+}
+
+#locations-map-wrap {
+	margin-top: 16px;
+	border: 10px solid #fff;
+}
+
+#locations-map {
+	width: 100%;
+	height: 375px;
+}
+
+#locations-map img{
+	max-width:none
+}
+
+.locations-infobox {
+	color: #000;
+}
+
+.locations-infobox h3 {
+	font-size: 24px;
+	line-height: 26px;
+	color: #000 !important;
+	font-weight: 400 !important;
+	margin-top: 0px !important;
+}
+
+/* #Menu
+================================================== */
+#menu {
+	padding: 6% 0;
+	width: 100%;
+}
+
+#menu .container{
+	background-color: #FDF6ED;
+	margin-bottom: 5%;
+}
+
+#menu .span6{
+	margin-left: 0;
+}
+
+#menu .menu-section .menu-section-title{
+	text-align: center;
+	font-family: "VanDijk";
+	color: #DB232B;
+	margin-bottom: 5%;
+	margin-top: 2%;
+}
+
+#menu .menu-section .menu-item{
+	list-style: disc inside;
+	display: list-item;
+	color: red;
+	padding-left: 10%;
+	opacity: 1;
+}
+
+#menu .menu-section .menu-item span{
+	color: black;
+	font-family: "segoe";
+	font-weight: bold;
+}
+
+#menu .menu-section div.span12.nomargin p.span9{
+	color: black;
+	font-style: italic;
+	font-size: 14px;
+	margin-left: 15%;
+}
+
+#menu .menu-section div.span12.nomargin p.span1{
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: -20px;
+}
+
+#menu .menu-section div.span12.nomargin p{
+	display: inline;
+}
+
+
+/* #Wine List
+================================================== */
+#wine {
+	float: left;
+	width: 100%;
+	padding: 0 0 6%;
+	position: relative;
+}
+
+#wine .container > iframe{
+	margin: 0 auto;
+}
+
+#wine .page-title {
+	margin-top: 6%;
+}
+
+#grapes, #grape, #wine-glass {
+	position: absolute;
+	height: 100%;
+	width: 1920px;
+	display: block;
+	overflow: hidden;
+}
+
+#grapes {
+	background: url(../images/content/grapes.png) 0 0 no-repeat;
+	left: 1%;
+}
+
+#grape {
+	background: url(../images/content/grape.png) 0 0 no-repeat;
+	left: 1%;
+}
+
+#wine-glass {
+	background: url(../images/content/wine-glass.png) 0 0 no-repeat;
+	left: 57%;
+}
+
+.wine > .span12 > .span10 > strong {
+	text-transform: uppercase;
+}
+.price-type {
+	padding-top: 22px;
+	text-align: right;
+}
+
+.wine-price {
+	font-weight: bold;
+	text-align: right;
+}
+
+/* #Gallery
+================================================== */
+#gallery {
+	width: 100%;
+	min-height: 780px;
+	padding: 6% 0;
+	clear: both;
+}
+
+#gallery figure {
+	position: relative;
+	overflow: hidden;
+	display: block; 
+	padding: 0;
+	margin: 0;
+	border: 10px solid #fff;
+}
+
+#gallery figure img {
+	
+}
+
+#gallery figcaption { 
+  position: absolute; 
+  background: url(../images/bg/black_px_75.png) repeat;
+  color: white; 
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.6s ease;
+  -moz-transition:    opacity 0.6s ease;
+  -o-transition:      opacity 0.6s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+#gallery figure:hover figcaption {
+  opacity: 1;
+}
+
+#gallery figcaption div {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	display: block;
+}
+
+.thumbnail {
+	border: 0px;
+	box-shadow: none;
+	border-radius: 0px;
+	padding: 0px;
+}
+
+a.thumbnail:hover {
+	box-shadow: none;
+	opacity: 1 !important;
+}
+
+/* #Contact
+================================================== */
+#contact {
+	position: relative;
+	min-height: 710px;
+	width: 100%;
+	padding: 0 0 25px;
+}
+
+#contact-map {
+	width: 100%;
+	height: 360px;
+	margin-bottom: 60px;
+}
+
+#contact-map img{
+	max-width:none
+}
+
+#contact .form-horizontal {
+	margin-top: 20px;
+}
+
+.form-horizontal .control-label {
+	width: 120px;
+	text-align: left;
+}
+
+.form-horizontal .controls {
+	margin-left: 140px;
+}
+
+#response {
+	float: left;
+	padding-top: 2px;
+	font-size: 14px;
+	max-width: 80%;
+}
+
+.social {
+	list-style-type: none;
+	margin: 20px 0 0 0;
+}
+
+.social li {
+	float: left;
+}
+
+.social li a {
+	background-repeat: no-repeat;
+	background-image: url(../images/icons/social.png);
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+	text-indent: -9999px;
+	opacity: 0.9;
+}
+
+.social li a[href*="facebook.com"]{
+	background-position: 0 0;
+}
+
+.social li a[href*="twitter.com"]{
+	background-position: -32px 0;
+}
+
+.social li a[href*="tumblr.com"]{
+	background-position: -64px 0;
+}
+
+.social li a[href*="digg.com"]{
+	background-position: -96px 0;
+}
+
+.social li a[href*="google.com"]{
+	background-position: -128px 0;
+}
+
+/*
+ * Example if you need to add other social icons *
+ * 
+.social li a[href*="behance.com"]{
+	background-image: url(../images/social/behance.png);
+}
+*/
+
+/* #Closing
+================================================== */
+#closing {
+	width: 100%;
+	min-height: 400px;
+	padding: 50px 0 80px;
+	color: #fff;
+}
+
+#circles {
+	margin: auto;
+	width: 70px;
+	font-size: 48px;
+	letter-spacing: -7px;
+	margin-bottom: 30px;
+}
+
+
+#closing blockquote {
+	border-left: 0px;
+	margin: auto;
+	text-align: center;
+	float: none;
+}
+
+#closing blockquote p {
+	font-family: 'PT Serif', Time New Roman, serif;
+	font-size: 20px;
+	font-style: italic;
+	line-height: 24px;
+}
+
+#closing .quote-border {
+	width: 133px;
+	height: 5px;
+	background: #fff;
+	margin: 40px auto;
+}
+
+#closing h3 {
+	font-size: 28px;
+	line-height: 32px;
+	margin-bottom: 0px;
+}
+
+#mailing-list {
+	text-align: center;
+}
+
+#mailing-list p {
+	font-size: 14px;
+}
+
+#mailing-list .form-inline {
+	margin-top: 60px;
+}
+
+#mailing-list .email {
+	width: 256px;
+}
+
+#mailing-list .form-inline input,
+#mailing-list .form-inline button {
+	margin-bottom: 10px;
+}
+
+.to-top {
+	height: 23px;
+	padding: 0 0 0 30px;
+	color: #fff;
+	display: block;
+	margin: 70px auto 0;
+	width: 80px;
+	font-size: 14px;
+	
+}
+
+.to-top:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* #Footer
+================================================== */
+#footer {
+	background: #232528;
+	text-align: center;
+	color: #fff;
+	padding: 30px 0;
+}
+
+#footer a:hover {
+	color: #cfcfcf;
+	text-decoration: none;
+}
+
+.copy {
+	width: 100%;
+	line-height: 16px;
+}
+
+.copy a {
+	color: #fff;
+	font-weight: bold;
+}
+
+.powered {
+	width: 100%;
+	font-size: 12px;
+	color: #b2b2b2;
+}
+
+.powered a {
+	color: #b2b2b2;
+}
+
+/* #Custom Select
+================================================== */
+select.select-menu{
+	z-index: 50;
+	min-height: 34px !important;
+}
+.customSelect, .select-menu {
+/* Styles For Your Select Box */
+	display: none !important;
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	line-height: 22px;
+	background: #fff;
+	border-radius: 3px;
+	-o-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 6px 8px 4px;
+	width: 180px;
+}
+
+.customSelect.changed {
+/* You can use this if you want a different style after user has made a selection */
+}
+
+.customSelect.customSelectFocus {
+/* You can use this if you want a different style after user has made a selection */
+}
+.customSelect.customSelectOpen {
+/* You can use this if you want a different style after user has made a selection */
+}
+
+/* We can style the inner box too */
+.customSelectInner {
+	height: 26px;
+	width: 100% !important;
+}
+
+/* Mobile Fix
+================================================== */
+html.mobile #grapes, 
+html.mobile #grape, 
+html.mobile #wine-glass {
+	display: none !important;
+}
+
+html.mobile #about, 
+html.mobile #directions, 
+html.mobile #wine, 
+html.mobile #gallery, 
+html.mobile #contact, 
+html.mobile #closing {
+	background-attachment: scroll !important;
+	background-position: top center !important;
+}
+
+/* Internet Explorer
+================================================== */
+html.ie7 #nav-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+html.ie7 .form-horizontal .controls	{
+	margin-left: 0px;
+}
+
+html.ie7 .form-horizontal {
+	max-width: 95%;
+}
+
+html.ie7 #top ul > li,
+html.ie8 #top ul > li {
+	margin-right: 4px;
+}
+
+html.ie7 #locations-select,
+html.ie8 #locations-select {
+	padding: 0px !important;
+	line-height: 10px !important;
+}
+
+html.ie7 #gallery figcaption,
+html.ie8 #gallery figcaption { 
+	display: none;
+	opacity: 1;
+}
+
+html.ie7 #gallery figure:hover figcaption,
+html.ie8 #gallery figure:hover figcaption {
+	display: block;
+}
+
+
+/* #Media Queries
+================================================== */
+	
+	/* Because all the cool kids doing it */
+	img {max-width:100%;}
+	
+	/* Very large screen (devices and browsers) */
+	@media only screen and (min-width: 1200px) {
+	
+		body {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		#top {
+			height: 72px;
+		}
+		
+		#front {
+			padding-top: 76px;
+		}
+		
+		#top ul.span4 > li {
+			float: left; 
+			margin: 13px 20px 0 0;
+		}
+			
+		#top ul.span4 > li > a {
+			font-size: 19px;
+			padding: 11px 10px;
+		}
+		
+		.thumbnails > li {
+			margin-bottom: 30px;
+		}
+
+		/* #Front */
+
+		#front .title span {
+			font-size: 32px;
+			line-height: 62px;
+		}
+
+		#front .subtitle span{
+			line-height: 62px;
+			font-size: 28px;
+		}
+
+		#about-pictures img {
+			border: 10px solid #fff;
+			margin-bottom: 40px;
+		}
+		
+		.flex-direction-nav .flex-next, 
+		.flexslider:hover .flex-next {
+			right: 90px; 
+		}
+
+		.flex-direction-nav .flex-prev, 
+		.flexslider:hover .flex-prev {
+			left: 90px;
+		}
+	
+	}	
+	
+	/* Smaller than wider layout 1200 (devices and browsers) */ 
+/*	@media only screen and (min-width: 979px) and (max-width: 1199px) {}
+
+	/* Smaller than standard 960 (devices and browsers) */
+/*	@media only screen and (max-width: 979px) {
+	
+		#top ul.span4 > li {
+			margin: 10px 6px 0 0;
+		}
+
+		#top ul.span4 > li > a {
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 8px 4px;
+		}
+
+		#gallery {
+			min-height: 680px !important;
+			padding-bottom: 0px !important;
+		}
+		
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+/*	@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+		#front .title span {
+			font-size: 20px;
+			line-height: 46px;
+		}
+
+		#front .subtitle span{
+			line-height: 46px;
+			font-size: 17px;
+		}
+
+
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+/*	@media only screen and (max-width: 767px) {
+	
+		/* Bootstrap fix */
+	/*	body {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		 }
+		.container {
+			padding-left: 20px;
+			padding-right: 20px;
+		 }
+
+		#top {
+			height: 60px;
+		}
+
+		/* Responsive Nav */
+	/*	#top ul.span4 {	
+			display: none;
+		}
+
+		#top .customSelect, .select-menu {
+			display: block !important;
+		}
+
+		/* Logo repositioning */
+	/*	#logo {
+			width: 300px !important;
+		}
+		#logo > div {
+			margin-left: 0;
+		}
+
+		/* #Front */
+
+	/*	#front .title span {
+			font-size: 18px;
+			line-height: 40px;
+		}
+
+		#front .subtitle span{
+			line-height: 40px;
+			font-size: 16px;
+		}
+
+		.slide-content {
+			bottom: 15%;
+		}
+
+		.flex-direction-nav { display: none;}
+
+		/* About */
+	/*	#about-caption {
+			padding-top: 20px;
+		}
+
+		/* Menu */
+	/*	.menu-section .span11, .menu-section .span10 {
+			min-height: auto !important;
+		}
+
+		.menu-section .span12 > .span1 {
+			font-weight: bold;
+		}
+
+		.span2.wine-price {
+			text-align: left;
+		}
+
+		.menu-section.wine .price-type {
+			display: none;
+		}
+
+
+		/* Gallery */
+	/*	.thumbnails > li.span4 {
+			width: 46.667%;
+			float: left;
+			margin-left: 15px;
+		}
+
+		/*	StickyButton 	*/
+	/*	.sticky-button{
+	/*		border: none;
+			position: fixed;
+			right: 5%;
+			bottom: 20%;
+			z-index: 25;
+		}
+	
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/*	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/*	@media only screen and (max-width: 480px) {
+
+		#top .container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		#logo > div {
+			background: transparent;
+			width: 130px;
+			padding: 10px 0 0 0;
+			margin: 0;
+		}
+
+		#logo > div > a {
+			font-size: 32px;
+			color: #c7c7c7;
+			line-height: 28px;
+		}
+
+		#logo > div > a span {
+			font-size: 12px;
+			line-height: 11px;
+		}
+
+		#logo > div > a:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		#front .title, #front .subtitle {
+			display: none;
+		}
+
+		#top .customSelect, .select-menu {
+			width: 130px;
+			right: 10px;
+		}
+
+		select.select-menu {
+			width: 145px !important;
+		}
+
+		#about .caption-border {
+			margin: 20px auto 30px;
+		}
+
+		/* Gallery */
+	/*	.thumbnails > li.span4 {
+			width: 100%;
+			max-width: 360px;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		/* Contact */
+		/*.form-horizontal .controls {
+			margin-left: 0px;
+		}
+
+		#response {
+			max-width: 60%;
+		}
+
+
+	}
+	
+	/* iPhone 2G-4S in portrait & landscape */
+/*	@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
+		html, body {
+			overflow-x: hidden;
+		}
+		section {
+			overflow-x: hidden;
+		}
+	}
+	
+	/* iPad portrait 
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		#front .subtitle span {
+			font-size: 16px !important;
+			line-height: 30px !important;
+		}
+
+	}
+
+	/* iPad landscape 
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		#front .subtitle span {
+			font-size: 18px !important;
+			line-height: 40px !important;
+		}
+
+	}	
+
+/* #Misc
+================================================== */
+.right { float: right !important; text-align: right !important; }
+.left { float: left !important; }
+.center { text-align: center !important; }
+.nomargin { margin-left: 0px !important; margin-right: 0px !important; }
+.error { color: #b70000; }
+.success { color: #00a517; }
+
+/* #Switch Panel
+================================================== */
+#switch {
+	float: left;
+	display: block;
+	background: #fff;
+	padding: 10px 20px 15px 10px;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	position: fixed;
+	left: 0;
+	top: 20%;
+	z-index: 9999;
+}
+
+#switch h4 {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+	line-height: 16px;
+}
+
+#switch ul {
+	list-style-type: none;
+	margin-left: 0px;
+	margin-bottom: 10px;
+}
+
+#switch ul li {
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+
+#switch ul li a {
+	color: #ccc;
+}
+
+#switch ul li a.current {
+	color: #AC0000;
+}
+
+#show {
+	position: fixed;
+	left: 0;
+	top: 20%;
+	background: #fff;
+	padding: 15px 20px 15px 10px;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	margin-top: 10px;
+	z-index: 9999;
+}
+
+#show h4, #hide {
+	cursor: pointer;
+	font-size: 12px !important;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 13px !important;
+}
+
+#show h4 span, #hide span {
+	font-weight: 400;
+	display: block;
+	clear: both;
+}
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+		
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+	@font-face {
+	    font-family: 'VanDijk';
+	    src: url('../fonts/VanDijk.otf');
+	    font-weight: normal;
+	    font-style: normal; }
+
+	@font-face {
+	    font-family: 'segoe';
+	    src: url('../fonts/segoe-media-center-semibold.ttf');
+	    font-weight: normal;
+	    font-style: normal; }
+	    

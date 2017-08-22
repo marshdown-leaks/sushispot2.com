@@ -1,0 +1,49 @@
+/* smooth theme */
+#top {
+	background-image: none;
+	background-color: #15191b;
+	border-top: 0px;
+	/*height: 64px;*/
+	padding: 4px 0;
+}
+
+#logo > div {
+	background-image: none;
+	padding-top: 8px;
+}
+
+#logo > div > a {
+	color: #fff;
+}
+
+#logo > div > a:hover {
+	color: #ccc;
+}
+
+#top ul > li > a, 
+#front .title span, 
+#front .subtitle span, 
+#front .action a,
+#about-text h2,
+.customSelect, 
+.select-menu {
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-o-border-radius: 0px !important;
+}
+
+
+
+/* Very large screen (devices and browsers) */
+@media only screen and (min-width: 1200px) {
+
+	#logo > div {
+		padding-top: 12px;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 480px) {
+	
+}
